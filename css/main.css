@@ -462,8 +462,20 @@ html[dir="rtl"] .cat-item::after {
   right: 15px;
 }
 
+@media (max-width: 767px) {
+  html[dir="rtl"] .cat-item::after {
+    right: 9px;
+  }
+}
+
 html[dir="ltr"] .cat-item::after {
   left: 15px;
+}
+
+@media (max-width: 767px) {
+  html[dir="ltr"] .cat-item::after {
+    left: 9px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1100,11 +1112,18 @@ html[dir="ltr"] .half-banner .banner-desc > li::before {
 }
 
 .full-banner .banner-img img {
-  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .full-banner .banner-img img {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .full-banner::before {

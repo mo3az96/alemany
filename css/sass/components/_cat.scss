@@ -52,10 +52,18 @@
 
         @include rtl {
             right: 15px;
+
+            @include xs {
+                right: 9px;
+            }
         }
 
         @include ltr {
             left: 15px;
+
+            @include xs {
+                left: 9px;
+            }
         }
 
         @include xs {
