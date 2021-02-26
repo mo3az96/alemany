@@ -77,7 +77,8 @@ header {
     @include rtl {
         margin-left: 18px;
 
-        &.cart-btn {
+        &.cart-btn,
+        &.search-btn {
             margin: 0;
         }
     }
@@ -85,7 +86,8 @@ header {
     @include ltr {
         margin-right: 18px;
 
-        &.cart-btn {
+        &.cart-btn,
+        &.search-btn {
             margin: 0;
         }
     }
@@ -246,6 +248,10 @@ header {
         @include xs {
             width: 130px;
         }
+    }
+
+    .search-input {
+        background-color: $back;
     }
 }
 

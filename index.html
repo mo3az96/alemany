@@ -121,9 +121,23 @@
           <img src="images/logo.png" class="img-responsive">
         </a>
         <div class="icons">
-          <a role="button" class="search-btn header-ico">
-            <i class="lnr lnr-magnifier"></i>
-          </a>
+          <div class="header-search">
+            <a role="button" class="search-btn header-ico">
+              <i class="lnr lnr-magnifier"></i>
+            </a>
+            <div class="search-overlay"></div>
+            <div class="search-cont">
+              <form autocomplete="off" class="search-form">
+                <span class="icon">
+                  <i class="lnr lnr-magnifier"></i>
+                </span>
+                <input autocomplete="false" type="text" class="search-input" placeholder="ادخل كلمة البحث">
+                <button type="button" class="search-button">
+                  بحث
+                </button>
+              </form>
+            </div>
+          </div>
           <a role="button" class="branch-btn header-ico">
             <i class="lnr lnr-map"></i>
           </a>
@@ -161,23 +175,6 @@
     </div>
   </header>
   <!-- End Header -->
-  <!-- Start Search -->
-  <div class="search-overlay"></div>
-  <section class="search-cont">
-    <span class="close-btn">
-      <span class="lnr lnr-cross"></span>
-    </span>
-    <form autocomplete="off" class="search-form">
-      <span class="icon">
-        <i class="lnr lnr-magnifier"></i>
-      </span>
-      <input autocomplete="false" type="text" class="search-input" placeholder="ادخل كلمة البحث">
-      <button type="button" class="search-button">
-        بحث
-      </button>
-    </form>
-  </section>
-  <!-- End Search -->
   <!-- Start Main Slider -->
   <main class="main-slider-sec">
     <div class="main-slider">

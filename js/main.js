@@ -88,15 +88,13 @@ $(document).ready(function () {
     sliderinit('.cat-slide-4')
     //////////** search **//////////
     $('.search-btn').click(function () {
-        $(".search-overlay, .search-cont").fadeIn(300);
-        $(".search-form").addClass("active");
-        $("body").addClass("overflow");
+        $(".search-overlay, .search-cont").slideDown(300);
+        $(this).addClass("active");
     });
 
-    $('.search-overlay, .close-btn').click(function () {
-        $(".search-overlay, .search-cont").fadeOut(400);
-        $(".search-form").removeClass("active");
-        $("body").removeClass("overflow");
+    $('.search-overlay').click(function () {
+        $(".search-overlay, .search-cont").slideUp(400);
+        $(this).removeClass("active");
     });
     //////////** menu **//////////
     $('.setting-anchor').click(function () {
