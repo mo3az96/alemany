@@ -2020,6 +2020,12 @@ html[dir='ltr'] .footer-list > li > a:hover, html[dir='ltr'] .footer-list > li >
   .footer-about {
     margin-bottom: 56px;
   }
+  html[dir="rtl"] .footer-about {
+    padding-left: 0;
+  }
+  html[dir="ltr"] .footer-about {
+    padding-right: 0;
+  }
   .footer-newsletter {
     margin-top: 60px;
   }

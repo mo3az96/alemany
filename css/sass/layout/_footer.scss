@@ -124,6 +124,13 @@ footer {
 
     .footer-about {
         margin-bottom: 56px;
+        @include rtl {
+            padding-left: 0;
+        }
+    
+        @include ltr {
+            padding-right: 0;
+        }
     }
 
     .footer-newsletter {
