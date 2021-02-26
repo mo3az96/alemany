@@ -37,7 +37,7 @@
     .slider-img {
         display: block;
         width: 100%;
-        min-height: 470px;
+        height: 100vh;
 
         @include xs {
             height: 470px;
@@ -45,8 +45,13 @@
     }
 
     img {
+        width: 100%;
         height: 100%;
         object-fit: cover;
+
+        @include xs {
+            width: auto;
+        }
     }
 
     .swiper-btn {

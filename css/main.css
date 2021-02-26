@@ -311,7 +311,7 @@ html[dir="ltr"] .have_sub > a::after {
 .main-slider .slider-img {
   display: block;
   width: 100%;
-  min-height: 470px;
+  height: 100vh;
 }
 
 @media (max-width: 767px) {
@@ -321,9 +321,16 @@ html[dir="ltr"] .have_sub > a::after {
 }
 
 .main-slider img {
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .main-slider img {
+    width: auto;
+  }
 }
 
 .main-slider .swiper-btn {
@@ -452,11 +459,11 @@ html[dir="ltr"] .cat-item {
 }
 
 html[dir="rtl"] .cat-item::after {
-  right: 5px;
+  right: 15px;
 }
 
 html[dir="ltr"] .cat-item::after {
-  left: 5px;
+  left: 15px;
 }
 
 @media (max-width: 767px) {
@@ -882,11 +889,18 @@ html[dir="ltr"] .shopNow .lnr {
 }
 
 .half-banner .banner-img img {
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .half-banner .banner-img img {
+    width: auto;
+  }
 }
 
 .half-banner .banner-text {
@@ -990,11 +1004,6 @@ html[dir="ltr"] .half-banner .banner-desc > li::before {
   }
 }
 
-.half-banner:hover .banner-img img {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-}
-
 .full-banner {
   margin-top: 85px;
   margin-bottom: 110px;
@@ -1080,6 +1089,13 @@ html[dir="ltr"] .half-banner .banner-desc > li::before {
   .full-banner .banner-img {
     min-height: auto;
     height: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+  .full-banner .banner-img {
+    width: auto;
   }
 }
 

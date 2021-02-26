@@ -51,11 +51,11 @@
         z-index: 1;
 
         @include rtl {
-            right: 5px;
+            right: 15px;
         }
 
         @include ltr {
-            left: 5px;
+            left: 15px;
         }
 
         @include xs {
