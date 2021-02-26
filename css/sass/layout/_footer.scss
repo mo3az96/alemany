@@ -1,0 +1,165 @@
+footer {
+    margin-top: 80px;
+    margin-bottom: 58px;
+}
+
+.footer-about {
+    @include rtl {
+        padding-left: 20px;
+    }
+
+    @include ltr {
+        padding-right: 20px;
+    }
+}
+
+.footer-head {
+    font-size: 17px;
+    color: $text;
+    font-weight: 700;
+    margin: 0 0 16px;
+}
+
+.footer-desc {
+    font-size: 16px;
+    line-height: 1.875;
+    font-weight: 200;
+    margin: 0;
+}
+
+.footer-list {
+    margin: 0;
+
+    >li {
+        margin-bottom: 9px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        >a {
+            font-size: 16px;
+            font-weight: 200;
+            color: $text;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                transform: translateX(-5px);
+                color: $text;
+
+                html[dir='ltr'] & {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+.maroof {
+    text-align: center;
+    margin: 56px auto 28px;
+}
+
+.last-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.copyrights {
+    font-size: 15px;
+    color: $text;
+    font-weight: 200;
+    margin: 0;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    width: 46px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: $sec;
+    color: #fff;
+    font-size: 18px;
+    margin: 0 2px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $text;
+        background-color: $main;
+        text-decoration: none;
+    }
+}
+
+.pay {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@include sm {
+    footer {
+        margin-top: 55px;
+        margin-bottom: 45px;
+    }
+
+    .footer-about,
+    .footer-newsletter {
+        .footer-head {
+            text-align: center;
+        }
+    }
+
+    .footer-about {
+        margin-bottom: 56px;
+    }
+
+    .footer-newsletter {
+        margin-top: 60px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+        line-height: 2.143;
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .maroof {
+        margin: 44px auto 28px;
+    }
+
+    .last-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .copyrights {
+        order: 3;
+    }
+
+    .socials {
+        order: 1;
+        margin-bottom: 37px;
+    }
+
+    .pay {
+        order: 2;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+}

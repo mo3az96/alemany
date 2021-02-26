@@ -1,0 +1,185 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .img-here {
+        margin-bottom: 19px;
+    }
+
+    .pro-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        margin: 0;
+
+        >a {
+            font-size: 16px;
+            color: $text;
+            text-align: center;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: all 0.3s ease-in-out;
+
+            &:hover,
+            &:focus {
+                color: $main;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .prices {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+
+        span {
+            margin: 0 3.5px;
+        }
+
+        @include xs {
+            justify-content: flex-start;
+            flex-direction: column;
+            height: 40px;
+        }
+    }
+
+    .current-price {
+        font-size: 16px;
+        color: $text;
+        font-weight: 700;
+
+        @include xs {
+            font-size: 14px;
+        }
+    }
+
+    .old-price {
+        font-size: 16px;
+        color: #999999;
+        font-weight: 500;
+        text-decoration: line-through;
+
+        @include xs {
+            font-size: 14px;
+        }
+    }
+
+    .addToCart {
+        position: relative;
+        width: 151px;
+        max-width: 100%;
+        height: 41px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #fff;
+        background-color: $sec;
+        margin: 15px auto;
+        transition: all 0.3s ease-in-out;
+
+        .lnr {
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+            color: #fff;
+
+            @include rtl {
+                margin-left: 8px;
+            }
+
+            @include ltr {
+                margin-right: 8px;
+            }
+
+            @include xs {
+                font-size: 14px;
+            }
+        }
+
+        @include xs {
+            font-size: 11px;
+        }
+
+        &:hover,
+        &:focus {
+            color: $text;
+            background-color: $main;
+            text-decoration: none;
+
+            .lnr {
+                color: $text;
+                transform: rotate(-5deg);
+            }
+        }
+
+        &.added_to_cart {
+            background-color: $new;
+            color: #fff;
+            cursor: default;
+
+            &:hover,
+            &:focus {
+                background-color: $new;
+                color: #fff;
+
+                .lnr {
+                    transform: rotate(0);
+                }
+            }
+        }
+
+        &.isLoading {
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $sec;
+                z-index: 1;
+            }
+
+            &:after {
+                content: '\f110';
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                animation: fa-spin 2s infinite linear;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin: -12px 0 0 -10px;
+                color: #fff;
+                z-index: 2;
+            }
+        }
+    }
+
+    .pro-label {
+        width: 54px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        background-color: $main;
+        color: $text;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 500;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+
+        @include sm {
+            width: 43px;
+            height: 39px;
+            font-size: 10px;
+        }
+    }
+}

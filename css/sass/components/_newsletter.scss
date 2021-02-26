@@ -1,0 +1,61 @@
+.newsletter-form {
+    position: relative;
+
+    .newsletter-input {
+        width: 100%;
+        height: 50px;
+        background-color: $back;
+        font-size: 15px;
+        color: $text;
+        padding: 0 22px;
+        border: 1px solid transparent;
+        transition: all 0.3s ease-in-out;
+
+        &::placeholder {
+            color: #999999;
+        }
+
+        &:focus {
+            border-color: $sec;
+        }
+
+        @include rtl {
+            padding-left: 100px;
+            text-align: right;
+        }
+
+        @include ltr {
+            padding-right: 100px;
+            text-align: left;
+        }
+    }
+
+    .newsletter-button {
+        position: absolute;
+        top: 5px;
+        width: 88px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $sec;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $text;
+            background-color: $main;
+        }
+
+        @include rtl {
+            left: 6px;
+        }
+
+        @include ltr {
+            right: 6px;
+        }
+    }
+}

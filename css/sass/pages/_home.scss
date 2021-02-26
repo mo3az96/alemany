@@ -1,0 +1,52 @@
+.fixed-img {
+    position: absolute;
+    top: 100%;
+
+    @include rtl {
+        right: 0;
+    }
+
+    @include ltr {
+        transform: scaleX(-1);
+        left: 0;
+    }
+
+    @include xs {
+        display: none;
+    }
+}
+
+.section-head {
+    text-align: center;
+    color: $text;
+    margin-bottom: 37px;
+
+    .section-title {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0 0 18px;
+
+        @include sm {
+            font-size: 26px;
+        }
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+
+.colored-background {
+    background-color: $back;
+    margin-top: 100px;
+    padding-top: 110px;
+    padding-bottom: 75px;
+
+    @include sm {
+        margin-top: 45px;
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+}

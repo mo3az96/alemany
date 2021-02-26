@@ -1,0 +1,125 @@
+.search-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 14;
+    background-color: rgba(var(--secondery-color-rgb), 0.99);
+    display: none;
+}
+
+.search-cont {
+    position: fixed;
+    z-index: 15;
+    top: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+
+    .close-btn {
+        position: fixed;
+        top: -125px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: $main;
+        }
+    }
+}
+
+.search-form {
+    position: relative;
+    transform: translateY(-250px);
+    transition: all 0.4s ease-in-out;
+
+    @include xs {
+        width: calc(100vw - 30px);
+    }
+
+    &.active {
+        transform: translateY(0);
+    }
+
+    .icon {
+        position: absolute;
+        top: 0;
+        color: #808080;
+        font-size: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include rtl {
+            right: 20px;
+        }
+
+        @include ltr {
+            left: 20px;
+        }
+    }
+}
+
+.search-input {
+    width: 550px;
+    height: 55px;
+    background-color: #fff;
+    font-size: 16px;
+    color: $text;
+    padding: 0 50px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+
+    @include xs {
+        width: 100%;
+    }
+
+    &::placeholder {
+        color: #808080;
+    }
+
+    &:focus {
+        border-color: $main;
+    }
+
+    @include rtl {
+        padding-left: 125px;
+        text-align: right;
+    }
+
+    @include ltr {
+        padding-right: 125px;
+        text-align: left;
+    }
+}
+
+.search-button {
+    position: absolute;
+    width: 110px;
+    height: 44px;
+    top: 6px;
+    background-color: $sec;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: $text;
+        background-color: $main;
+    }
+
+    @include rtl {
+        left: 6px;
+    }
+
+    @include ltr {
+        right: 6px;
+    }
+}

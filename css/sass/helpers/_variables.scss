@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #f9c648;
+    --primary-color-rgb: 249, 199, 72;
+    --secondery-color: #000;
+    --secondery-color-rgb: 0, 0, 0;
+    --text-color: #000000;
+}
+
+$main:var(--primary-color);
+$sec:var(--secondery-color);
+$text:var(--text-color);
+
+$back:#fafafa;
+$border:#e6e6e6;
+
+$new:#00ca00;
+$off:#e13737;
+$ship:#ffa300;

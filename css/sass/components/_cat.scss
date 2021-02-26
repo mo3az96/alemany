@@ -1,0 +1,142 @@
+.cats-slider-sec {
+    transform: translateY(-45%);
+    position: relative;
+    z-index: 9;
+
+    .swiper-pagination {
+        margin-top: 30px;
+    }
+
+    @include xs {
+        transform: translateY(-35%);
+    }
+}
+
+.cat-item {
+    padding: 15px 0 0;
+    max-width: 281px;
+    position: relative;
+
+    @include xs {
+        padding: 8px 0 0;
+        max-width: 160px;
+    }
+
+    @include rtl {
+        padding-right: 15px;
+
+        @include xs {
+            padding-right: 10px;
+        }
+    }
+
+    @include ltr {
+        padding-left: 15px;
+
+        @include xs {
+            padding-left: 10px;
+        }
+    }
+
+
+    &::after {
+        content: "";
+        background-color: #fff;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
+        @include rtl {
+            right: 5px;
+        }
+
+        @include ltr {
+            left: 5px;
+        }
+
+        @include xs {
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+        }
+    }
+
+
+}
+
+.cat {
+    width: 100%;
+    background-color: $sec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    padding: 35px 10px 65px;
+    position: relative;
+    z-index: 2;
+
+    @include xs {
+        padding: 25px 10px;
+    }
+
+    .cat-img {
+        @include xs {
+            height: 50px;
+
+            img {
+                max-width: none;
+                max-height: 100%;
+            }
+        }
+    }
+
+    .cat-name {
+        font-size: 24px;
+        color: #fff;
+        font-weight: 600;
+        display: block;
+        margin-top: 15px;
+        transition: all 0.3s ease-in-out;
+
+        @include xs {
+            font-size: 20px;
+            margin-top: 8px;
+        }
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+
+        path {
+            transition: all 0.3s ease-in-out;
+        }
+
+        @include xs {
+            transform: translate(-50%, -50%) scale(0.55);
+        }
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+        svg {
+            path {
+                stroke: $main;
+            }
+        }
+
+        .cat-name {
+            color: $main;
+        }
+    }
+}

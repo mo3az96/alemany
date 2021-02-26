@@ -1,0 +1,266 @@
+.shopNow {
+    background-color: rgb(255, 255, 255);
+    width: 190px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: $text;
+    transition: all 0.3s ease-in-out;
+
+    .lnr {
+        transition: all 0.3s ease-in-out;
+
+        @include rtl {
+            margin-left: 10px;
+        }
+
+        @include ltr {
+            margin-right: 10px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: $text;
+        background-color: $main;
+        text-decoration: none;
+
+        .lnr {
+            transform: rotate(-5deg);
+        }
+    }
+}
+
+
+.half-banner {
+    margin-top: 95px;
+    margin-bottom: 110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $sec;
+    color: #fff;
+    align-items: center;
+
+    @include sm {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    @include xs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner-img {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        height: 100%;
+        min-height: 360px;
+
+        @include xs {
+            min-height: auto;
+            height: 360px;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .banner-text {
+        width: 570px;
+        max-width: 100%;
+        overflow: hidden;
+
+        @include md {
+            width: auto;
+        }
+
+        @include rtl {
+            padding-right: 60px;
+
+            @include md {
+                padding: 0 30px;
+            }
+
+            @include xs {
+                padding: 60px 30px 55px;
+            }
+        }
+
+        @include ltr {
+            padding-left: 60px;
+
+            @include md {
+                padding: 0 30px;
+            }
+
+            @include xs {
+                padding: 60px 30px 55px;
+            }
+        }
+
+    }
+
+    .banner-title {
+        font-size: 36px;
+        font-weight: 700;
+        margin: 0 0 27px;
+
+        @include sm {
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+
+    .banner-desc {
+        line-height: 1.765;
+        font-size: 17px;
+
+        @include sm {
+            font-size: 16px;
+            line-height: 1.875;
+            text-align: justify;
+        }
+
+        >li {
+            display: flex;
+
+            &::before {
+                font-family: 'Linearicons-Free';
+                font-size: 16px;
+
+                @include rtl {
+                    content: "\e879";
+                    margin-left: 18px;
+                }
+
+                @include ltr {
+                    content: "\e87a";
+                    margin-right: 18px;
+                }
+            }
+        }
+    }
+
+    .shopNow {
+        margin-top: 30px;
+
+        @include sm {
+            margin: 30px auto 0;
+        }
+    }
+
+    &:hover {
+        .banner-img {
+            img {
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+.full-banner {
+    margin-top: 85px;
+    margin-bottom: 110px;
+    position: relative;
+
+    @include sm {
+        margin-top: 36px;
+        margin-bottom: 65px;
+    }
+
+    .banner-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(var(--secondery-color-rgb), 0.4);
+        color: #fff;
+        z-index: 2;
+
+    }
+
+    .banner-title {
+        font-size: 48px;
+        font-weight: 700;
+        margin: 0 0 14px;
+
+        @include sm {
+            font-size: 40px;
+            margin: 0 0 8px;
+        }
+    }
+
+    .banner-desc {
+        font-size: 48px;
+        font-weight: 300;
+        margin: 0;
+
+        @include sm {
+            font-size: 32px;
+        }
+    }
+
+    .shopNow {
+        margin-top: 40px;
+
+        @include sm {
+            margin-top: 30px;
+        }
+    }
+
+    .banner-img {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        height: 100%;
+        min-height: 400px;
+
+        @include xs {
+            min-height: auto;
+            height: 400px;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border: 70px solid rgba(255, 255, 255, 0);
+        top: 0;
+        right: 0;
+        transition: all 0.5s ease-in-out;
+        z-index: 1;
+    }
+
+    &:hover {
+        .banner-img {
+            img {
+                transform: scale(1.02);
+            }
+        }
+
+        &::before {
+            border: 0 solid rgba(255, 255, 255, 0.7);
+        }
+    }
+}
