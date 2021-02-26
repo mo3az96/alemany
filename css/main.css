@@ -1837,6 +1837,11 @@ html[dir="ltr"] .header-setting {
   background-color: #fafafa;
 }
 
+.header-scroll .search-form {
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+}
+
 .xs-icons {
   display: none;
   -webkit-box-align: center;

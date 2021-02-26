@@ -249,10 +249,13 @@ header {
             width: 130px;
         }
     }
-
     .search-input {
         background-color: $back;
     }
+    .search-form {
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+    }
+
 }
 
 
