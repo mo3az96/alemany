@@ -415,6 +415,7 @@ html[dir="ltr"] .have_sub > a::after {
 .cat-item {
   padding: 15px 0 0;
   max-width: 281px;
+  margin: auto;
   position: relative;
 }
 
